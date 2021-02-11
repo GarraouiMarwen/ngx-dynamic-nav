@@ -1,0 +1,45 @@
+<div id="navbarResponsive" class="menu-panel h-100 ">
+  <div class="menu-content">
+    <div class="menu">
+      <ul class="navbar-nav main-menu">
+
+        <li *ngFor="let item of menuItems | menuFilter:{hidden: true};"
+            [class]="item.itemClass" [id]="item.itemId"
+            [ngStyle]="setStyles(item)">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" (click)="openItem(item, undefined)">
+            <span class="icon margin-left margin-right"><fa-icon [icon]="item.leftIcon"></fa-icon></span>
+            <span class="link-menu">{{item.itemText}}</span>
+            <span class="chevron-right" *ngIf="item.children!=null">
+                        <fa-icon icon="chevron-right" [class.rotate-fa-icon]="item.openedItem"></fa-icon>
+            </span>
+          </a>
+          <ul class="sub-main-menu" *ngIf="item.children != null && item.children.length >0"
+              [ngStyle]="item.openedItem ? {'display' : 'block'}:{'display' : 'none'}">
+            <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ item: item }"></ng-container>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <ng-template #recursiveListTmpl let-item="item">
+    <li *ngFor="let subItem of item.children"
+        [id]="subItem.itemId" [ngStyle]="setStyles(subItem)">
+      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger item-sub-main-menu" (click)="openItem(subItem, item)">
+        <span class="icon margin-right" [ngStyle]="{'padding-left' : subItem.paddingLeft != null ? subItem.paddingLeft : '0px'}">
+          <fa-icon [icon]="subItem.leftIcon"></fa-icon>
+        </span>
+        <span class="link-menu">{{subItem.itemText}} </span>
+        <span class="chevron-right" *ngIf="subItem.children!=null">
+              <fa-icon icon="chevron-right" [class.rotate-fa-icon]="subItem.openedItem"></fa-icon>
+        </span>
+      </a>
+      <ul *ngIf="subItem.children != null && subItem.children.length >0" class="sub-main-menu-second-level"
+          [ngStyle]="subItem.openedItem ? {'display' : 'block'}:{'display' : 'none'}">
+        <ng-container
+          *ngTemplateOutlet="recursiveListTmpl; context:{ item: subItem }"
+        ></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+</div>
