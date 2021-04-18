@@ -8,7 +8,7 @@ import {MenuItemConfig} from '../../../ngx-nav/src/lib/models/MenuItemConfig';
 })
 export class AppComponent {
   title = 'navTest';
-  config = 'light';
+  config = 'dark';
   borderBottom = '1px solid #9a0245';
   ngNavConfig: MenuItemConfig[] = [
     {
