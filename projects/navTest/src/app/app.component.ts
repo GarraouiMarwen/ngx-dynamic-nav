@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MenuItemConfig} from '../../../ngx-nav/src/lib/models/MenuItemConfig';
+import {MenuItemConfig} from '../../../ngx-dynamic-nav/src/lib/models/MenuItemConfig';
 
 @Component({
   selector: 'app-root',

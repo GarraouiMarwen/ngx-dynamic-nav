@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxNavModule} from 'ngx-nav';
+import { NgxDynamicNavModule} from 'ngx-dynamic-nav';
 import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    NgxNavModule,
+    NgxDynamicNavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

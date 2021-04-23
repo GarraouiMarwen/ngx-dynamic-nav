@@ -18,11 +18,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-nav": [
-        "dist/ngx-nav"
+      "ngx-dynamic-nav": [
+        "dist/ngx-dynamic-nav"
       ],
-      "ngx-nav/*": [
-        "dist/ngx-nav/*"
+      "ngx-dynamic-nav/*": [
+        "dist/ngx-dynamic-nav/*"
       ]
     }
   }
