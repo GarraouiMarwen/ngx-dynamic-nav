@@ -24,7 +24,7 @@ This README would normally document whatever steps are necessary to get your app
 All you need is  to put elements in an array of json objects.
 You can keep the default css, or you can put your custom css.
 
-#Setup
+# Setup #
 1- In your root application folder run:
  ```npm i ngx-dynamic-nav```
 
@@ -182,7 +182,7 @@ that's all!
 
 Hope it can Help you :) 
 
-#Dependencies
+# Dependencies #
  ```
   "@fortawesome/angular-fontawesome": "^0.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -191,14 +191,10 @@ Hope it can Help you :)
     "ngx-bootstrap": "^6.2.0",
     "bootstrap": "^4.5.3",
  ```
-#Donation
+# Donation #
 Did this project help you to reduce time? I won't say no to a cup of coffee 🍵 :)
 
 
 <a href="https://www.paypal.com/donate?hosted_button_id=PEWHLPGFQ4NYU">
   <img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Donate with PayPal" />
 </a>
-
-#Keywords
-
-angular nav,menu, Dynamic-nav, vertical-nav, directive, recursive-nav
