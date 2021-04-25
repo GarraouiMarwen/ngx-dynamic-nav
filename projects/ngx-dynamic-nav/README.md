@@ -30,17 +30,28 @@ You can keep the default css, or you can put your custom css.
 
 2- Once ngx-dynamic-nav is installed, you need to import the main module NgxDynamicNavModule :
 
-```import {NgxDynamicNavModule} from 'ngx-dynamic-nav';```
+```
+   import {NgxDynamicNavModule} from 'ngx-dynamic-nav';
+   import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+
+```
 
 ````
 @NgModule({
 ...
-imports: [NgxDynamicNavModule, ...],
+imports: [NgxDynamicNavModule, FontAwesomeModule ...],
 ...
 })
 export class YourAppModule {
 }
 ````
+In angular.json update your styles.
+```
+ "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+```
 3- Then use it in the specific page:
 
 Assuming you want to create a nav then all you need is to follow these steps:
@@ -171,12 +182,15 @@ that's all!
 
 Hope it can Help you :) 
 
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
+#Dependencies
+ ```
+  "@fortawesome/angular-fontawesome": "^0.3.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@ng-bootstrap/ng-bootstrap": "^8.0.0",
+    "ngx-bootstrap": "^6.2.0",
+    "bootstrap": "^4.5.3",
+ ```
 #Donation
 Did this project help you to reduce time? I won't say no to a cup of coffee 🍵 :)
 

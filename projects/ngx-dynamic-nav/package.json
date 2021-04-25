@@ -1,6 +1,6 @@
 {
   "name": "ngx-dynamic-nav",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
@@ -15,6 +15,10 @@
   "author": {
     "name": "GARRAOUI Marwen",
     "url": "https://github.com/GarraouiMarwen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GarraouiMarwen/ngx-dynamic-nav"
   },
   "keywords": ["Dynamic Navigation"," Recursive Navigation","nav","ngx-dynamic-nav"]
 }
